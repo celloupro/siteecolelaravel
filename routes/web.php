@@ -36,3 +36,14 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//forum
+Route::get('/topics', 'TopicController@index')->name('topics.index');
+Route::resource('/topics', 'TopicController')->except(['index']);
+
+
+//comment forum
+Route::get('showFromNotification/{topic}/{notification}', 'TopicController@showFromNotification')->name('topics.showFromNotification');
+Route::post('/comments/{topic}', 'CommentController@store')->name('comments.store');
+Route::post('/commentReply/{comment}', 'CommentController@storeCommentReply')->name('comments.storeReply');
+Route::post('/markedAsSolution/{topic}/{comment}', 'CommentController@markedAsSolution')->name('comments.markedAsSolution');

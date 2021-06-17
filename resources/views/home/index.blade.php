@@ -2,6 +2,7 @@
 
 @section('content')
 
+<br><br><br><br><br><br><br><br><br><br>
 <!-- hero slider -->
 <section class="hero-section overlay bg-cover" data-background="images/banner/banner-1.jpg">
 
@@ -50,5 +51,5 @@
     </div>
   </section>
   <!-- /hero slider -->
-    
+  <br><br><br><br><br>
 @endsection
