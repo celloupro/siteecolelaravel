@@ -134,8 +134,8 @@
                 Presentation
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="teacher.html">Administration</a>
-                <a class="dropdown-item" href="teacher-single.html">A-propos</a>
+                <a class="dropdown-item" href=" {{route('administration.index')}} ">Administration</a>
+                <a class="dropdown-item" href=" {{route('about.index')}} ">A-propos</a>
               </div>
             </li>
             <li class="nav-item dropdown view">
@@ -145,8 +145,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{route('reglement.index')}}">reglement interieure</a>
-                <a class="dropdown-item" href="teacher-single.html">forum du lycée</a>
-                <a class="dropdown-item" href="notice.html">Résultat</a>
+                <a class="dropdown-item" href="{{route('topics.index')}}">forum du lycée</a>
+                <a class="dropdown-item" href="{{route('resultat.index')}}">Résultat</a>
               </div>
             </li>
             <li class="nav-item @@blog">

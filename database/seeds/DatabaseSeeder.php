@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Journal;
 use App\Photo;
 use App\Reglement;
+use App\Resultat;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,11 +31,18 @@ class DatabaseSeeder extends Seeder
             'title' => "title reglement",
             'content' => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa excepturi iste beatae maxime "
         ];
+        $data4 = [
+            'photo' => 'resultats\June2021\Pi0H41eMGqWgq5VwHsOy.jpg',
+            'nom' => 'seeding resultat ',
+            'niveau' => "1ere",
+            'moyenne' => "16.20",
+            'classe' => "1ereC1"
+        ];
         // $this->call(UserSeeder::class);
         for($i = 0; $i < 31; $i++){
             // Journal::create($data);
             // Photo::create($data2);
-            Reglement::create($data3);
+            Resultat::create($data4);
         }
     }
 }

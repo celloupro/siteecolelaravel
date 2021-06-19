@@ -47,3 +47,12 @@ Route::get('showFromNotification/{topic}/{notification}', 'TopicController@showF
 Route::post('/comments/{topic}', 'CommentController@store')->name('comments.store');
 Route::post('/commentReply/{comment}', 'CommentController@storeCommentReply')->name('comments.storeReply');
 Route::post('/markedAsSolution/{topic}/{comment}', 'CommentController@markedAsSolution')->name('comments.markedAsSolution');
+
+//resultat
+Route::get('resultat', 'ResultatController@index')->name('resultat.index');
+
+//administration 
+Route::get('administration', 'OtherController@administration')->name('administration.index');
+
+// apropos (about)
+Route::get('apropos', 'OtherController@about')->name('about.index');
