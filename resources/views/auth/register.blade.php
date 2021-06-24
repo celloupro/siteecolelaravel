@@ -1,7 +1,7 @@
-@extends('layouts.app')
-
+@extends('layoutstwo.app')
 @section('content')
-<br><br><br><br><br><br><br><br><br>
+<section class="pt-0">
+    
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -75,5 +75,6 @@
         </div>
     </div>
 </div>
+</section>
 <br><br><br><br><br>
 @endsection

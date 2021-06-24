@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <img class="img-fluid w-100 mb-4" src="images/about/about-page.jpg" alt="about image">
+          <img class="img-fluid w-100 mb-4" src="{{asset('style/images/about/about-page.jpg')}}" alt="about image">
           <h2 class="section-title">ABOUT OUR JOURNY</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
           <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
@@ -39,29 +39,29 @@
         <!-- funfacts item -->
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           <div class="text-center">
-            <h2 class="count text-white" data-count="60">0</h2>
-            <h5 class="text-white">TEACHERS</h5>
+            <h2 class="count text-white" data-count="6000">0</h2>
+            <h5 class="text-white">élève</h5>
           </div>
         </div>
         <!-- funfacts item -->
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           <div class="text-center">
             <h2 class="count text-white" data-count="50">0</h2>
-            <h5 class="text-white">COURSES</h5>
+            <h5 class="text-white">inspecteur</h5>
           </div>
         </div>
         <!-- funfacts item -->
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           <div class="text-center">
-            <h2 class="count text-white" data-count="1000">0</h2>
-            <h5 class="text-white">STUDENTS</h5>
+            <h2 class="count text-white" data-count="100">0</h2>
+            <h5 class="text-white">educateur</h5>
           </div>
         </div>
         <!-- funfacts item -->
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           <div class="text-center">
-            <h2 class="count text-white" data-count="3737">0</h2>
-            <h5 class="text-white">SATISFIED CLIENT</h5>
+            <h2 class="count text-white" data-count="37">0</h2>
+            <h5 class="text-white">censeur</h5>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
   <!-- /funfacts -->
   
   <!-- success story -->
-  <section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+  <section class="section bg-cover" data-background="{{asset('style/images/backgrounds/success-story.jpg')}}">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm-4 position-relative success-video">

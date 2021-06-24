@@ -19,12 +19,16 @@
         </section>
     <!-- /page title -->
 
+    <div class="container">
+        <h2 class="text-center pt-5">Album photo de l'ecole</h2>
+    </div>
+
   <div class="row justify-content-center">
         <!-- Trigger the Modal -->
 
             @foreach ($photo as $item)
                 <div class="justify-content-center">
-                    <img class="zoom myImg m-4" id="myImg" alt="{{$item->description}}" src="{{asset('storage/'.$item->image)}}"  width="250" height="200" style="width:100%;max-width:300px">
+                    <img class="zoom myImg m-4 img-thumbnail" id="myImg" alt="{{$item->description}}" src="{{asset('storage/'.$item->image)}}" style="width:100%;max-width:300px">
                 </div>
             @endforeach
 

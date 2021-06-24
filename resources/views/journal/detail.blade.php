@@ -18,11 +18,13 @@
   </div>
 </section>
 <!-- /page title -->
-@if (session()->has('success'))
+<div class="container justify-content-center">
+  @if (session()->has('success'))
     <div class="mt-3 alert alert-success" role="alert">
-        <h3>{{session()->get('success')}}</h3>
+        <h3 class="text-center">{{session()->get('success')}}</h3>
     </div>
-@endif
+  @endif
+</div>
     
 <!-- blog details -->
 <section class="section-sm bg-gray">

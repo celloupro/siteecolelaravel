@@ -2,9 +2,9 @@
 
 @section('content')
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br>
 <!-- hero slider -->
-<section class="hero-section overlay bg-cover" data-background="images/banner/banner-1.jpg">
+<section class="hero-section overlay bg-cover" data-background="{{asset('style/images/banner/banner-1.jpg')}}">
 
     <div class="container">
       <div class="hero-slider">
@@ -17,7 +17,7 @@
                 tempor
                 incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
+              <a href="{{route('contact.create')}}" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
                 tempor
                 incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
+              <a href="{{route('contact.create')}}" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
                 tempor
                 incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
+              <a href="{{route('contact.create')}}" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
   <div class="container-fluid p-0">
     <div class="row no-gutters">
       <div class="col-xl-4 col-lg-5 align-self-end">
-        <img class="img-fluid w-100" src="images/banner/banner-feature.png" alt="banner-feature">
+        <img class="img-fluid w-100" src="{{asset('style/images/banner/banner-feature.png')}}" alt="banner-feature">
       </div>
       <div class="col-xl-8 col-lg-7">
         <div class="row feature-blocks bg-gray justify-content-between">
@@ -103,10 +103,10 @@
         <h2 class="section-title">About Educenter</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </p>
         <p>cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-        <a href="about.html" class="btn btn-primary-outline">Learn more</a>
+        <a href="{{route('about.index')}}" class="btn btn-primary-outline">Learn more</a>
       </div>
       <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
-        <img class="img-fluid w-100" src="images/about/about-us.jpg" alt="about image">
+        <img class="img-fluid w-100" src="{{asset('style/images/about/about-us.jpg')}}" alt="about image">
       </div>
     </div>
   </div>
@@ -118,7 +118,7 @@
 <!-- /courses -->
 
 <!-- cta -->
-<section class="section bg-primary">
+{{-- <section class="section bg-primary">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
@@ -128,11 +128,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 <!-- /cta -->
 
 <!-- success story -->
-<section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+<section class="section bg-cover" data-background="{{asset('style/images/backgrounds/success-story.jpg')}}">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-sm-4 position-relative success-video">
@@ -158,11 +158,11 @@
     <div class="row">
       <div class="col-12">
         <div class="d-flex align-items-center section-title justify-content-between">
-          <h2 class="mb-0 text-nowrap mr-3">Upcoming Events</h2>
+          <h2 class="mb-0 text-nowrap mr-3">évenement a venir </h2>
           <div class="border-top w-100 border-primary d-none d-sm-block"></div>
-          <div>
+          {{-- <div>
             <a href="events.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -174,7 +174,7 @@
           <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
             <div class="card border-0 rounded-0 hover-shadow">
               <div class="card-img position-relative">
-                <img class="card-img-top rounded-0" src="{{asset('storage/'.$item->image)}}" alt="event thumb">
+                <img class="card-img-top rounded-0" width="300" height="250" src="{{asset('storage/'.$item->image)}}" alt="event thumb">
                 <div class="card-date"><span>{{\Carbon\Carbon::parse($item->date)->format('d')}}</span><br>{{\Carbon\Carbon::parse($item->date)->format('F')}}</div>
               </div>
               <div class="card-body">

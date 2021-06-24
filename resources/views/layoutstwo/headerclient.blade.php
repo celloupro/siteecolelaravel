@@ -90,18 +90,18 @@
                 @endif
             @else
                 @unless (auth()->user()->unreadNotifications->isEmpty())
-                    <li class="nav-item dropdown">
+                  <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    <span class="badge badge-warning">{{ auth()->user()->unreadNotifications->count() }}</span> notification(s) <span class="caret"></span>
+                      <span class="badge badge-warning">{{ auth()->user()->unreadNotifications->count() }}</span> notification(s) <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                       @foreach (auth()->user()->unreadNotifications as $unreadNotification)
-                    <a href="{{ route('topics.showFromNotification', ['topic' => $unreadNotification->data['topicId'], 'notification' => $unreadNotification->id]) }}" class="dropdown-item">{{ $unreadNotification->data['user'] }} a écrit sur votre sujet <strong>{{ $unreadNotification->data['topicTitle'] }}</strong></a>
-                    @endforeach
+                        <a href="{{ route('topics.showFromNotification', ['topic' => $unreadNotification->data['topicId'], 'notification' => $unreadNotification->id]) }}" class="dropdown-item">{{ $unreadNotification->data['user'] }} a écrit sur votre sujet <strong>{{ $unreadNotification->data['topicTitle'] }}</strong></a>
+                      @endforeach
                     </div>
-                    </li>
-                  @endunless
+                  </li>
+                @endunless
 
 
                 <li class="list-inline-item dropdown">

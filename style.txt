@@ -1,0 +1,55 @@
+//page acceuille
+    <-- header (petit blanc en haut) -->
+        1) on laisse facebook
+        2)numero sans lien 
+        3) enleve le research
+
+
+        <-- gros truc noir -->
+            1) mettre des slogan
+            2) modifie bouton apply now pour envoyer vers page contact
+            3) mettre image a la place du gros truc noir
+
+        <-- 4 truc comme sholarship new -->
+            1) petite presentation de bienvenu avec image a gauche 
+
+        <-- training in advenced network ->>
+            1) a suprimer
+
+        <-- success story -->
+            1) creer une chaine youte pour video
+            2) mettre le lien video qui montre une visite de l'ecole
+            3) modifier le succes story
+
+
+//page administration 
+    rien a modifier sauf faut lien
+
+//page apropos
+
+    1) modifier le text
+    2) course , teacher modifier les nombre et les diffrent element(censeur, prof, educateur eleve)
+    <-- success story -->
+        1) creer une chaine youte pour video
+        2) mettre le lien video qui montre une visite de l'ecole
+        3) modifier le succes story
+
+//reglement interieur 
+    rien a changer
+//resultat
+    rien a changer
+//page actualite
+    rien a change
+    <-- page actualite detail -->
+        1) dimunier taille image pricipale
+        2) center le message flash "le message a bien ete ajouter"
+        3)aour blog a revoir 
+
+//page gallery
+    1) chercher a faire un diaporama pour les image sur le network
+    2) style a optimiser !!!
+
+//forum 
+    1) styliser le formulaire et creation 
+    2)styliser page de connection et creation de profile
+    3) mettre en forme le fargot password

@@ -69,43 +69,61 @@
     <div class="container">
       <div class="row no-gutters">
         <div class="col-lg-4 text-center text-lg-left">
-          <a class="text-color mr-3" href="callto:+443003030266"><strong>CALL</strong> +44 300 303 0266</a>
+          <a class="text-color mr-3" href="tel:+2250102236740"><strong>CALL</strong> +44 300 303 0266</a>
           <ul class="list-inline d-inline">
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class=" ti-youtube"></i></a></li>
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-instagram"></i></a></li>
           </ul>
         </div>
         <div class="col-lg-8 text-center text-lg-right">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#">research</a></li>
+          <ul class="list-inline d-inline">
             @guest
                 <li class="list-inline-item">
-                    <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('login') }}">connexion</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="list-inline-item">
-                        <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{ route('register') }}">inscription</a>
                     </li>
                 @endif
             @else
+                @unless (auth()->user()->unreadNotifications->isEmpty())
+                  <li class="list-inline-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      <span class="badge badge-warning">{{ auth()->user()->unreadNotifications->count() }}</span> notification(s) <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      @foreach (auth()->user()->unreadNotifications as $unreadNotification)
+                        <a href="{{ route('topics.showFromNotification', ['topic' => $unreadNotification->data['topicId'], 'notification' => $unreadNotification->id]) }}" class="dropdown-item">{{ $unreadNotification->data['user'] }} a écrit sur votre sujet <strong>{{ $unreadNotification->data['topicTitle'] }}</strong></a>
+                      @endforeach
+                    </div>
+                  </li>
+                @endunless
                 <li class="list-inline-item dropdown">
                     <a id="navbarDropdown" class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('home') }}">
+                          liste de mes sujet
+                        </a>
+                        <a class="dropdown-item" href="{{ route('topics.create') }}">
+                          creer un topics
+                        </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            deconnexion
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
                     </div>
+                    
                 </li>
             @endguest
           </ul>
@@ -156,7 +174,7 @@
               <a class="nav-link" href="{{route('gallery')}}">Galerie d'image</a>
             </li>
             <li class="nav-item @@contact">
-              <a class="nav-link" href="{{route('contact.create')}}">CONTACT</a>
+              <a class="nav-link" href="{{route('contact.create')}}">Contact</a>
             </li>
           </ul>
         </div>
@@ -180,7 +198,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           <!-- logo -->
-          <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png" alt="logo"></a>
+          <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="{{asset('style/images/logo.png')}}" alt="logo"></a>
           <ul class="list-unstyled">
             <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
             <li class="mb-2">+1 (2) 345 6789</li>
@@ -246,8 +264,7 @@
         <div class="col-sm-5 text-sm-right text-center">
           <ul class="list-inline">
             <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-facebook text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-twitter-alt text-primary"></i></a></li>
-            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-linkedin text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-youtube text-primary"></i></a></li>
             <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-instagram text-primary"></i></a></li>
           </ul>
         </div>
